@@ -7,6 +7,10 @@ def read_data(filename):
         return load(f)
 
 
+def write_data(data, filename):
+    with open(filename, 'w') as f:
+        dump(data, f, indent=4)
+
 def load_to_base(login, password):
     a = {
         'username': login,
